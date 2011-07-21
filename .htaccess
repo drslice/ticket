@@ -1,0 +1,11 @@
+RewriteEngine on
+
+# only needed if you are not putting the index.php in the DOCROOT
+# RewriteBase /
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
